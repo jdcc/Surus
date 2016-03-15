@@ -195,6 +195,9 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
     diff = std::abs(obj_prev - obj);
     obj_prev = obj;
     mu = getDynamicMu(E_matrix);
+    if (verbose) {
+      Rcout << "Mu on iteration " << iter << ": " << mu << std::endl;
+    }
     iter++;
     if (diff < tol) converged = true;
   }

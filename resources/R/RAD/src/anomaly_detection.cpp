@@ -173,6 +173,13 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
   double tol = 1e-8 * obj_prev;
   double diff = 2 * tol;
   double mu = m*n / (4*X.lpNorm<1>());
+
+  if (verbose) {
+    Rcout << "Objective initial: " << obj_prev << std::endl;
+    Rcout << "Total initial: " << tot << std::endl;
+    Rcout << "Diff initial: " << diff << std::endl;
+    Rcout << "Mu initial: " << mu << std::endl;
+  }
   
   double obj;
   Eigen::MatrixXd L_matrix = Eigen::MatrixXd::Zero(m,n);

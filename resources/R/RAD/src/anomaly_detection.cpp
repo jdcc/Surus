@@ -176,7 +176,7 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
 
   if (verbose) {
     Rcout << "Objective initial: " << obj_prev << std::endl;
-    Rcout << "Total initial: " << tot << std::endl;
+    Rcout << "Total initial: " << tol << std::endl;
     Rcout << "Diff initial: " << diff << std::endl;
     Rcout << "Mu initial: " << mu << std::endl;
   }

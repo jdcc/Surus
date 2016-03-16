@@ -193,7 +193,7 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
     List E = getE(X, L_matrix, S_matrix);
     E_matrix = E[0];
     if (verbose) {
-      Rcout << "E matrix: " << E_matrix << " on iteration " << iter << std::endl;
+      //Rcout << "E matrix: " << E_matrix << " on iteration " << iter << std::endl;
     }
     
     obj = objective(as<double>(L[1]), as<double>(S[1]), as<double>(E[1]));

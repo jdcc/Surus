@@ -175,6 +175,7 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
   double mu = m*n / (4*X.lpNorm<1>());
 
   if (verbose) {
+    Rcout << "Rows x Cols: " << m << "x" << n << std::endl;
     Rcout << "Objective initial: " << obj_prev << std::endl;
     Rcout << "Total initial: " << tol << std::endl;
     Rcout << "Diff initial: " << diff << std::endl;

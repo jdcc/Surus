@@ -180,6 +180,7 @@ List RcppRPCA(Eigen::MatrixXd X, double Lpenalty = -1, double Spenalty = -1, boo
     Rcout << "Total initial: " << tol << std::endl;
     Rcout << "Diff initial: " << diff << std::endl;
     Rcout << "Mu initial: " << mu << std::endl;
+    Rcout << "Matrix: " << X << std::endl;
   }
   
   double obj;
